@@ -1,5 +1,6 @@
 from random import random
 from datetime import datetime
+import json
 """
 1. Get httpd, rabbitMQ, postgreSQL Status 
 2. Save to {serviceName}-status-{@timestamp}.json
@@ -38,7 +39,8 @@ def get_postgreSQL_status() :
 def write_json_payload(service_name, paylaod) :
     timestamp = datetime.now().isoformat()
     file_name = service_name + '-status-' + timestamp + '.json'
-    # TODO : Write a Json File
+    with open(file_name, "w") as outfile:
+        json.dump(paylaod, outfile)
 
 write_json_payload('httpd', get_httpd_status())
 write_json_payload('rabbitMQ', get_rabbitMQ_status())
