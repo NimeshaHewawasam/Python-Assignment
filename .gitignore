@@ -161,3 +161,6 @@ cython_debug/
 
 # Status JSON
 *-status-*.json
+
+# ignore filter-sales-data csv
+filter_sales_data.csv

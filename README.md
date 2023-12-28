@@ -57,6 +57,12 @@ flask --app rest-api-service run
 - `"UP"` or `DOWN`
 
 
+### TEST 03
+- Following Command Generated Filterd New CSV file
+```
+python3 sold_properties.py
+```
+- NOTE : `sales_data.csv` -> `filter_sales_data.csv`
 
 ### Support 
 - nimesha93swj@gmail.com
